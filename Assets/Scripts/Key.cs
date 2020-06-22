@@ -1,31 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Key : MonoBehaviour
-{
-    public bool gotKey;
-    public GameObject invisiblePlatform;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        invisiblePlatform.gameObject.SetActive(false);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.tag == "Player")
-        {
-            this.gameObject.transform.position = new Vector2(-12, -7);
-            invisiblePlatform.gameObject.SetActive(true);
-            gotKey = true;
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0e8293485340db91f83e32e693fff04f242efd97582f59d385c49d00759bb09
+size 719
